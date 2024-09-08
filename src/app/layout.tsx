@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import React from "react";
+import DashboardWrapper from "./dashboardWrapper";
+import {Inter} from "next/dist/compiled/@next/font/dist/google";
+// const inter = Inter({ subsets: ["latin"] });
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,7 +32,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <DashboardWrapper>
+          {children}
+        </DashboardWrapper>
       </body>
     </html>
   );
