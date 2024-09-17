@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  zer0experience:
+    image: zer0experience
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
